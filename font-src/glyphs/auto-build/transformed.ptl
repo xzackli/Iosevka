@@ -489,7 +489,7 @@ glyph-block Autobuild-Transformed-Mathematical : begin
 	define [boldGrade g] : begin
 		local pGrade : (900 - g) / 100
 		return : 900 - 100 * (2 / 25) * pGrade * pGrade
-	define [tfBold   a]     : begin [set a.shape.weight : boldGrade a.shape.weight]
+	define [tfBold   a]     : begin [set a.shape.weight 900] [set a.shape.serifs 'slab']
 	define [tfItalic a]     : begin [set a.shape.slope 'italic']
 	define [tfSans   a]     : begin [set a.shape.serifs 'sans']
 	define [tfBoldItalic a] : begin [tfBold a] [tfItalic a]
